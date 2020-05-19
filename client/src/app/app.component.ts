@@ -13,8 +13,8 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.http.get('http://localhost:3000/testing').subscribe(x => {
-      this.title = x;
+    this.http.get('http://localhost:3000/').subscribe(x => {
+      this.title = x['data'];
     });
   }
 
